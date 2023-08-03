@@ -3,15 +3,15 @@ package task2;
 import java.util.ArrayList;
 
 public class UserPresenter {
-    UserModel user;
-    UserView view;
+    UserModel user; // объявление
+    UserView view;  // объявление
 
-    public UserPresenter(UserModel userM, UserView viewV) {
+    public UserPresenter(UserModel userM, UserView viewV) { // конструктор
         user = userM;
         view = viewV;
     }
 
-    public void startButton(){
+    public void startButton(){ // моя кнопка старта
         ArrayList<String> result = new ArrayList<>(view.startingScreen());
         String switcher = result.get(0);
         switch (switcher) {

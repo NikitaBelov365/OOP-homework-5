@@ -41,7 +41,7 @@ public class UserView {
         return loginForm;
     }
 
-    public ArrayList<String> changePasswordForm() {
+    public ArrayList<String> changePasswordForm() { // метод смены пароля
         ArrayList<String> changePasswordForm = new ArrayList<>(4);
         System.out.println("To change password enter name, login and new password");
         changePasswordForm.add("3");

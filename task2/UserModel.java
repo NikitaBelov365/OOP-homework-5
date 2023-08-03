@@ -29,12 +29,12 @@ public class UserModel {
         this.password = password;
     }
 
-    public void saveUserChanges(String name, String login, String password) {
+    public void saveUserChanges(String name, String login, String password) { // метод сохранения изменений
         this.name = name;
         this.login = login;
         this.password = password;
     }
-    public void getUserInfo() {
+    public void getUserInfo() { // инфа о юзере
         System.out.printf("Name: %s, Login: %s, password: %s%n", name, login, password);
     }
 
