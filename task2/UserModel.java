@@ -1,5 +1,7 @@
 package task2;
 
+import java.io.IOException;
+
 public class UserModel {
     String name;
     String login;
@@ -18,21 +20,43 @@ public class UserModel {
     }
 
     public void setName(String name) {
-        this.name = name;
+        try {
+            this.name = name;
+            if (name.isEmpty()) {
+                throw new IllegalArgumentException("Имя пользователя не может быть пустым");
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error " + e.getMessage());
+        }
     }
 
     public void setLogin(String login) {
-        this.login = login;
+        try {
+            this.login = login;
+            if (login.isEmpty()) {
+                throw new IllegalArgumentException("Логин не может быть пустым");
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error " + e.getMessage());
+        }
+
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        try {
+            this.password = password;
+            if (password.isEmpty()) {
+                throw new IllegalArgumentException("Пароль не может быть пустым");
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error " + e.getMessage());
+        }
     }
 
     public void saveUserChanges(String name, String login, String password) { // метод сохранения изменений
-        this.name = name;
-        this.login = login;
-        this.password = password;
+        setName(name);
+        setLogin(login);
+        setPassword(password);
     }
     public void getUserInfo() { // инфа о юзере
         System.out.printf("Name: %s, Login: %s, password: %s%n", name, login, password);

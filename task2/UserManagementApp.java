@@ -9,8 +9,6 @@ public class UserManagementApp {
         UserPresenter presenter = new UserPresenter(um, uv);
 
         presenter.startButton();
-        presenter.startButton();
-        presenter.startButton();
-        presenter.startButton();
+
     }
 }

@@ -13,7 +13,6 @@ public class UserView {
 
     public String inputLogin() { // метод ввода логина
         System.out.println("Input user login: ");
-        System.out.println(123);
         return scanner.nextLine();
     }
 
@@ -56,6 +55,7 @@ public class UserView {
         System.out.println("Hello, welcome to my login program. What do you want to do?");
         System.out.println("1 - register, 2 - you already have account");
         int firstSwitcher = scanner.nextInt();
+        scanner.nextLine();
         switch (firstSwitcher) {
             case 1 -> {
                 return registrationForm();
